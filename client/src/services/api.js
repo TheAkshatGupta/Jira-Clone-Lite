@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://jira-clone-backend-0kf2.onrender.com/",
 });
 
 export default API;
