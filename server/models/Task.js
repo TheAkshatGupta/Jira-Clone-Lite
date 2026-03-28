@@ -5,19 +5,14 @@ const taskSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-  },
   status: {
     type: String,
     enum: ["todo", "inprogress", "done"],
     default: "todo",
   },
-  assignedTo: {
-    type: String,
-  },
-  createdBy: {
-    type: String,
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
 }, { timestamps: true });
 
